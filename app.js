@@ -3,24 +3,24 @@ const data = [
     {
         name: 'John Doe', 
         age: 30, 
-        gender: 'male', 
-        lookingfor: 'female',
+        gender: 'Male', 
+        lookingfor: 'Female',
         location: 'Boston, MA',
         image: 'https://randomuser.me/api/portraits/men/82.jpg'
     },
     {
         name: 'Jenn Smith', 
         age: 25, 
-        gender: 'female', 
-        lookingfor: 'male',
+        gender: 'Female', 
+        lookingfor: 'Male',
         location: 'Miami, FL',
         image: 'https://randomuser.me/api/portraits/women/82.jpg'
     },
     {
         name: 'William Johnson', 
         age: 35, 
-        gender: 'male', 
-        lookingfor: 'female',
+        gender: 'Male', 
+        lookingfor: 'Female',
         location: 'Lynn, MA',
         image: 'https://randomuser.me/api/portraits/men/83.jpg'
     },
@@ -37,15 +37,15 @@ function nextProfile(){
 const currentProfile = profiles.next().value;
 
     document.getElementById('profileDisplay').innerHTML = `
-    <ul class="list-group>
-        <li class="list-group-item>Name: ${currentProfile.name}</li>
-        <li class="list-group-item>Age: ${currentProfile.age}</li>
-        <li class="list-group-item>Location: ${currentProfile.location}</li>
-        <li class="list-group-item>Name: ${currentProfile.gender}</li>
-        <li class="list-group-item>Preference: ${currentProfile.gender} looking for ${currentProfile.lookingfor}</li>
-        </ul>`;
+    <ul class="list-group">
+        <li class="list-group-item"> Name: ${currentProfile.name}
+        <li class="list-group-item"> Age: ${currentProfile.age}</li>
+        <li class="list-group-item"> Location: ${currentProfile.location}
+        <li class="list-group-item">Preference: ${currentProfile.gender} looking for ${currentProfile.lookingfor}</li>
+    </ul>
+    `;
 
-        document.getElementById('imageDisplay').innerHTML = `<img src="${currentProfile.image}"`
+        document.getElementById('imageDisplay').innerHTML = `<img src="${currentProfile.image}">`;
 }
 
 
